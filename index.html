@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -50,31 +49,57 @@
 
     </section>
 
-    <!-- Contact -->
-    <section class="contact">
-      <h2>Contact us now! Get a free quote!</h2>
-      <p>Poole • Bournemouth • Christchurch</p>
+  </main>
 
+  <!-- Contact Section (FULL WIDTH GREEN) -->
+  <section class="contact">
+    
+    <h2>Contact us now! Get a free quote!</h2>
+    <p>Poole • Bournemouth • Christchurch</p>
+
+    <!-- CONTACT FORM -->
+    <form action="https://formsubmit.co/davidsgardeningandmaintenance@gmail.com"
+          method="POST" class="contact-form">
+
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_subject" value="New Quote Request">
+      <input type="hidden" name="_template" value="table">
+
+      <div class="form-group">
+        <input type="text" name="name" placeholder="Your Name" required>
+      </div>
+
+      <div class="form-group">
+        <input type="tel" name="phone" placeholder="Your Phone Number" required>
+      </div>
+
+      <div class="form-group">
+        <textarea name="message" rows="4" placeholder="Your Message" required></textarea>
+      </div>
+
+      <button type="submit" class="btn-submit">Send Message</button>
+    </form>
+
+    <!-- FACEBOOK IMAGE BUTTON -->
+    <a href="https://www.facebook.com/people/Davids-Gardening-and-Maintenance/61565070434612/"
+       target="_blank" rel="noopener"
+       class="facebook-link">
+      <img src="assets/facebook.png" alt="Visit us on Facebook" class="facebook-img">
+    </a>
+
+    <!-- URGENT CONTACT -->
+    <div class="urgent">
+      <h3>If urgent:</h3>
       <p>Phone: 07459019059</p>
-
       <p>
         Email:
         <a href="mailto:davidsgardeningandmaintenance@gmail.com">
           davidsgardeningandmaintenance@gmail.com
         </a>
       </p>
+    </div>
 
-      <p>
-        Facebook:
-        <a href="https://www.facebook.com/people/Davids-Gardening-and-Maintenance/61565070434612/"
-           target="_blank" 
-           rel="noopener">
-          David's Gardening & Maintenance
-        </a>
-      </p>
-    </section>
-
-  </main>
+  </section>
 
   <footer>
     <div class="container">© 2025 David's Gardening &amp; Maintenance</div>
@@ -82,4 +107,3 @@
 
 </body>
 </html>
-
