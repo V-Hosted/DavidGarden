@@ -15,7 +15,7 @@ body {
   margin: 0;
   font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
   color: #fff;
-  background: linear-gradient(180deg, var(--dark) 0%, var(--primary) 50%, var(--accent) 100%);
+  background: var(--primary);
 }
 
 .container {
@@ -173,3 +173,4 @@ footer {
     height: 140px;
   }
 }
+
