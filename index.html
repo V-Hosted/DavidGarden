@@ -49,63 +49,58 @@
 
     </section>
 
-    <!-- Contact Section -->
-    <section class="contact">
-      <div class="container">
+  </main>
 
-        <h2>Contact us now! Get a free quote!</h2>
-        <p>Poole • Bournemouth • Christchurch</p>
+  <!-- Contact Section (FULL WIDTH GREEN) -->
+  <section class="contact">
+    <div class="contact-inner">
+      <h2>Contact us now! Get a free quote!</h2>
+      <p>Poole • Bournemouth • Christchurch</p>
 
-        <!-- Contact Form -->
-        <form action="https://formsubmit.co/davidsgardeningandmaintenance@gmail.com" 
-              method="POST" 
-              class="contact-form">
-          
-          <!-- Disable FormSubmit Captcha -->
-          <input type="hidden" name="_captcha" value="false">
+      <!-- CONTACT FORM -->
+      <form action="https://formsubmit.co/davidsgardeningandmaintenance@gmail.com"
+            method="POST" class="contact-form">
 
-          <!-- Name -->
-          <div class="form-group">
-            <input type="text" name="name" placeholder="Your Name" required>
-          </div>
+        <!-- Required hidden fields for FormSubmit -->
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_subject" value="New Quote Request">
+        <input type="hidden" name="_template" value="table">
 
-          <!-- Phone -->
-          <div class="form-group">
-            <input type="tel" name="phone" placeholder="Your Phone Number" required>
-          </div>
-
-          <!-- Message -->
-          <div class="form-group">
-            <textarea name="message" placeholder="Your Message" required></textarea>
-          </div>
-
-          <!-- Submit Button -->
-          <button type="submit" class="btn-submit">Send Message</button>
-        </form>
-
-        <!-- Facebook Link -->
-        <a href="https://www.facebook.com/people/Davids-Gardening-and-Maintenance/61565070434612/" 
-           target="_blank" 
-           rel="noopener"
-           class="facebook-link">
-          <img src="assets/facebook-logo.png" alt="Facebook - David's Gardening & Maintenance">
-        </a>
-
-        <!-- Urgent Section -->
-        <div class="urgent">
-          <h3>If urgent:</h3>
-          <p>Phone: 07459019059</p>
-          <p>Email: 
-            <a href="mailto:davidsgardeningandmaintenance@gmail.com">
-              davidsgardeningandmaintenance@gmail.com
-            </a>
-          </p>
+        <div class="form-group">
+          <input type="text" name="name" placeholder="Your Name" required>
         </div>
 
-      </div>
-    </section>
+        <div class="form-group">
+          <input type="tel" name="phone" placeholder="Your Phone Number" required>
+        </div>
 
-  </main>
+        <div class="form-group">
+          <textarea name="message" rows="4" placeholder="Your Message" required></textarea>
+        </div>
+
+        <button type="submit" class="btn-submit">Send Message</button>
+      </form>
+
+      <!-- FACEBOOK IMAGE BUTTON -->
+      <a href="https://www.facebook.com/people/Davids-Gardening-and-Maintenance/61565070434612/"
+         target="_blank" rel="noopener"
+         class="facebook-link">
+        <img src="assets/facebook.png" alt="Visit us on Facebook" class="facebook-img">
+      </a>
+
+      <!-- URGENT CONTACT -->
+      <div class="urgent">
+        <h3>If urgent:</h3>
+        <p>Phone: 07459019059</p>
+        <p>
+          Email:
+          <a href="mailto:davidsgardeningandmaintenance@gmail.com">
+            davidsgardeningandmaintenance@gmail.com
+          </a>
+        </p>
+      </div>
+    </div>
+  </section>
 
   <footer>
     <div class="container">© 2025 David's Gardening &amp; Maintenance</div>
