@@ -1,0 +1,9 @@
+{
+  "globalHeaders": {
+    "Access-Control-Allow-Origin": "*",
+    "Access-Control-Allow-Headers": "Referer"
+  },
+  "mimeTypes": {
+    ".json": "text/json"
+  }
+}
