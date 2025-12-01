@@ -7,9 +7,7 @@
   --light: #9eae94;
 }
 
-* {
-  box-sizing: border-box;
-}
+* { box-sizing: border-box; }
 
 body {
   margin: 0;
@@ -40,9 +38,7 @@ body {
   gap: 2rem;
 }
 
-.hero-text {
-  flex: 1;
-}
+.hero-text { flex: 1; }
 
 .hero h1 {
   font-weight: 800;
@@ -107,14 +103,9 @@ body {
   gap: 0.6rem;
 }
 
-.services li:last-child {
-  border-bottom: none;
-}
+.services li:last-child { border-bottom: none; }
 
-.tick {
-  color: var(--lime);
-  font-weight: 800;
-}
+.tick { color: var(--lime); font-weight: 800; }
 
 .gallery {
   display: grid;
@@ -141,9 +132,7 @@ body {
   text-align: center;
 }
 
-.contact h2 {
-  color: var(--light);
-}
+.contact h2 { color: var(--light); }
 
 /* ------------------------------
    CONTACT FORM
@@ -154,9 +143,7 @@ body {
   text-align: left;
 }
 
-.contact-form .form-group {
-  margin-bottom: 1rem;
-}
+.contact-form .form-group { margin-bottom: 1rem; }
 
 .contact-form input,
 .contact-form textarea {
@@ -166,14 +153,18 @@ body {
   border: none;
   font-size: 1rem;
   background: rgba(255,255,255,0.95);
-  color: #000;              /* visible text */
-  font-family: inherit;     /* match site font */
+  color: #000;
+  font-family: inherit;
 }
 
 .contact-form input::placeholder,
-.contact-form textarea::placeholder {
-  color: #666;             /* consistent placeholder */
-  font-family: inherit;
+.contact-form textarea::placeholder { color: #666; }
+
+.contact-form label {
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 }
 
 /* Submit button */
@@ -190,49 +181,28 @@ body {
   transition: 0.2s;
 }
 
-.btn-submit:hover {
-  background: var(--accent);
-}
+.btn-submit:hover { background: var(--accent); }
 
 /* ------------------------------
-   FACEBOOK BUTTON
+   SOCIAL ICONS
 --------------------------------*/
-.facebook-link {
-  display: block;
-  margin: 2rem auto 1rem;
-  max-width: 180px;
-  outline: none; 
-  -webkit-tap-highlight-color: transparent;
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
 }
 
-.facebook-link img {
-  width: 100%;
+.social-link img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
   border-radius: 10px;
   border: 2px solid rgba(255,255,255,0.3);
   transition: 0.25s;
-  outline: none;
 }
 
-.facebook-link:hover img {
-  transform: scale(1.05);
-}
-
-.facebook-link:focus,
-.facebook-link img:focus {
-  outline: none;
-}
-
-/* ------------------------------
-   URGENT SECTION
---------------------------------*/
-.urgent {
-  margin-top: 2rem;
-  text-align: center;
-}
-
-.urgent h3 {
-  color: var(--lime);
-}
+.social-link:hover img { transform: scale(1.05); }
 
 /* ------------------------------
    FOOTER
@@ -240,27 +210,30 @@ body {
 footer {
   background: rgba(0,0,0,0.35);
   border-top: 1px solid rgba(255,255,255,0.12);
+  padding: 1rem 0;
+}
+
+.footer-flex {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  text-align: center;
+}
+
+.footer-contact {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
 }
 
 /* ------------------------------
    RESPONSIVE
 --------------------------------*/
 @media (max-width: 840px) {
-
-  .hero-flex {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .image-ring img {
-    width: 180px;
-  }
-
-  .grid {
-    grid-template-columns: 1fr;
-  }
-
-  .gallery img {
-    height: 140px;
-  }
+  .hero-flex { flex-direction: column; text-align: center; }
+  .image-ring img { width: 180px; }
+  .grid { grid-template-columns: 1fr; }
+  .gallery img { height: 140px; }
 }
