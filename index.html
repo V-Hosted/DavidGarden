@@ -15,7 +15,6 @@
 
       <div class="hero-text">
         <h1>DAVID'S<br>GARDENING<br>&amp; MAINTENANCE</h1>
-        <p class="tagline">We care for your garden with love and attention.</p>
       </div>
 
       <div class="hero-image">
@@ -33,11 +32,19 @@
     <section class="grid">
 
       <ul class="services">
+       
         <li><span class="tick">✓</span> Lawn mowing</li>
         <li><span class="tick">✓</span> Weeding</li>
         <li><span class="tick">✓</span> Hedge trimming</li>
+        <li><span class="tick">✓</span> General Gardening</li>
         <li><span class="tick">✓</span> Traditional window cleaning</li>
+        <li><span class="tick">✓</span> Window Water-feed pole cleaning (pure water)</li>
+
         <li><span class="tick">✓</span> Traditional gutter cleaning</li>
+
+        
+    
+        <li><span class="tick" style="color: red;">♡</span> Love, care and attention to detail</li>
       </ul>
 
       <div class="gallery">
@@ -55,7 +62,7 @@
   <section class="contact">
     <div class="contact-inner">
       <h2>Contact us now! Get a free quote!</h2>
-      <p>Poole • Bournemouth • Christchurch</p>
+      <p>Poole • Bournemouth • Ferndom • Hamworthy • Wimbourne • Wareham</p>
 
       <!-- CONTACT FORM -->
       <form action="https://formsubmit.co/davidsgardeningandmaintenance@gmail.com"
@@ -75,35 +82,47 @@
         </div>
 
         <div class="form-group">
+          <input type="email" name="email" placeholder="Your Email" required>
+        </div>
+
+        <div class="form-group">
           <textarea name="message" rows="4" placeholder="Your Message" required></textarea>
+        </div>
+
+        <div class="form-group">
+          <label> I'm Human
+
+            <input type="checkbox" name="verification" required 
+       style="width: 25px; height: 25px; margin-left: 20px; margin-top: 10px;">
+            
+          </label>
         </div>
 
         <button type="submit" class="btn-submit">Send Message</button>
       </form>
 
-      <!-- FACEBOOK IMAGE BUTTON -->
-      <a href="https://www.facebook.com/people/Davids-Gardening-and-Maintenance/61565070434612/"
-         target="_blank" rel="noopener"
-         class="facebook-link">
-        <img src="assets/facebook.png" alt="Visit us on Facebook" class="facebook-img">
-      </a>
-
-      <!-- URGENT CONTACT -->
-      <div class="urgent">
-        <h3>If urgent:</h3>
-        <p>Phone: 07459019059</p>
-        <p>
-          Email:
-          <a href="mailto:davidsgardeningandmaintenance@gmail.com">
-            davidsgardeningandmaintenance@gmail.com
-          </a>
-        </p>
+      <!-- SOCIAL ICONS -->
+      <div class="social-icons">
+        <a href="https://www.facebook.com/people/Davids-Gardening-and-Maintenance/61565070434612/" target="_blank" rel="noopener" class="social-link">
+          <img src="assets/facebook.png" alt="Facebook">
+        </a>
+        <a href="https://www.instagram.com" target="_blank" rel="noopener" class="social-link">
+          <img src="assets/insta.png" alt="Instagram">
+        </a>
       </div>
+
     </div>
   </section>
 
+  <!-- FOOTER -->
   <footer>
-    <div class="container">© 2025 David's Gardening &amp; Maintenance</div>
+    <div class="container footer-flex">
+      <div>© 2025 David's Gardening &amp; Maintenance</div>
+      <div class="footer-contact">
+        <span>07459019059</span>
+        <span>davidsgardeningandmaintenance@gmail.com</span>
+      </div>
+    </div>
   </footer>
 
 </body>
