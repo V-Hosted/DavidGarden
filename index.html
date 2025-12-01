@@ -32,18 +32,13 @@
     <section class="grid">
 
       <ul class="services">
-       
         <li><span class="tick">✓</span> Lawn mowing</li>
         <li><span class="tick">✓</span> Weeding</li>
         <li><span class="tick">✓</span> Hedge trimming</li>
         <li><span class="tick">✓</span> General Gardening</li>
         <li><span class="tick">✓</span> Traditional window cleaning</li>
-        <li><span class="tick">✓</span> Window Water-fed pole cleaning (pure water)</li>
-
+        <li><span class="tick">✓</span> Window Water-feed pole cleaning (pure water)</li>
         <li><span class="tick">✓</span> Traditional gutter cleaning</li>
-
-        
-    
         <li><span class="tick" style="color: red;">♡</span> Love, care and attention to detail</li>
       </ul>
 
@@ -58,20 +53,17 @@
 
   </main>
 
-  <!-- Contact Section (FULL WIDTH GREEN) -->
+  <!-- Contact Section -->
   <section class="contact">
     <div class="contact-inner">
       <h2>Contact us now! Get a free quote!</h2>
-      <p>Poole • Bournemouth • Ferndom • Hamworthy • Wimbourne • Wareham</p>
+      <p>Poole • Bournemouth • Ferndom • Hamworthy • Wimbourne </p>
 
-      <!-- CONTACT FORM -->
-      <form action="https://formsubmit.co/davidsgardeningandmaintenance@gmail.com"
-            method="POST" class="contact-form">
+      <!-- CONTACT FORM (Web3Forms) -->
+      <form id="contactForm" action="https://api.web3forms.com/submit" method="POST" class="contact-form">
 
-        <!-- Required hidden fields for FormSubmit -->
-        <input type="hidden" name="_captcha" value="false">
-        <input type="hidden" name="_subject" value="New Quote Request">
-        <input type="hidden" name="_template" value="table">
+        <!-- Your Web3Forms access key -->
+        <input type="hidden" name="access_key" value="0cd66552-5d94-484a-80ec-b1dc5413612b">
 
         <div class="form-group">
           <input type="text" name="name" placeholder="Your Name" required>
@@ -91,10 +83,8 @@
 
         <div class="form-group">
           <label> I'm Human
-
             <input type="checkbox" name="verification" required 
-       style="width: 25px; height: 25px; margin-left: 20px; margin-top: 10px;">
-            
+            style="width: 25px; height: 25px; margin-left: 20px; margin-top: 10px;">
           </label>
         </div>
 
@@ -103,10 +93,13 @@
 
       <!-- SOCIAL ICONS -->
       <div class="social-icons">
-        <a href="https://www.facebook.com/people/Davids-Gardening-and-Maintenance/61565070434612/" target="_blank" rel="noopener" class="social-link">
+        <a href="https://www.facebook.com/people/Davids-Gardening-and-Maintenance/61565070434612/" target="_blank" class="social-link">
           <img src="assets/facebook.png" alt="Facebook">
         </a>
-        <a href="https://www.instagram.com" target="_blank" rel="noopener" class="social-link">
+        <a href="https://www.instagram.com" target="_blank" class="social-link">
+          <img src="assets/insta.png" alt="Instagram">
+        </a>
+        <a href="https://www.tiktok.com" target="_blank" class="social-link">
           <img src="assets/insta.png" alt="Instagram">
         </a>
       </div>
@@ -125,6 +118,30 @@
     </div>
   </footer>
 
+  <!-- Web3Forms Ajax Script -->
+  <script>
+    const form = document.getElementById("contactForm");
+
+    form.addEventListener("submit", async (e) => {
+      e.preventDefault();
+
+      const formData = new FormData(form);
+
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formData
+      });
+
+      let result = await response.json();
+
+      if (result.success) {
+        alert("Message sent successfully!");
+        form.reset();
+      } else {
+        alert("There was an error sending your message.");
+      }
+    });
+  </script>
+
 </body>
 </html>
-
