@@ -69,12 +69,9 @@
             method="POST"
             class="contact-form">
 
-        <!-- ACCESS KEY -->
+        <!-- WEB3FORMS ACCESS KEY -->
         <input type="hidden" name="access_key"
                value="0cd66552-5d94-484a-80ec-b1dc5413612b">
-
-        <!-- HIDDEN HONEYPOT (ANTI-SPAM) -->
-        <input type="checkbox" name="botcheck" style="display:none">
 
         <div class="form-group">
           <input type="text" name="name" placeholder="Your Name" required>
@@ -89,22 +86,15 @@
         </div>
 
         <div class="form-group">
-          <textarea name="message" rows="4"
-                    placeholder="Your Message" required></textarea>
+          <textarea name="message"
+                    rows="4"
+                    placeholder="Your Message"
+                    required></textarea>
         </div>
 
-        <!-- HUMAN CHECKBOX -->
-        <div class="form-group">
-          <label>
-            I'm Human
-            <input type="checkbox"
-                   name="botcheck"
-                   required
-                   style="width:25px;height:25px;margin-left:20px;margin-top:10px;">
-          </label>
-        </div>
-
-        <button type="submit" class="btn-submit">Send Message</button>
+        <button type="submit" class="btn-submit">
+          Send Message
+        </button>
       </form>
 
       <!-- SOCIAL ICONS -->
@@ -139,7 +129,7 @@
     </div>
   </footer>
 
-  <!-- WEB3FORMS AJAX SCRIPT -->
+  <!-- SIMPLE SUCCESS POPUP SCRIPT -->
   <script>
     const form = document.getElementById("contactForm");
 
@@ -160,13 +150,13 @@
         const result = await response.json();
 
         if (result.success) {
-          alert("Message sent successfully!");
+          alert("✅ Thank you! Your message has been sent successfully.");
           form.reset();
         } else {
-          alert(result.message || "There was an error sending your message.");
+          alert("❌ Something went wrong. Please try again.");
         }
       } catch (error) {
-        alert("Network error. Please try again later.");
+        alert("❌ Network error. Please try again later.");
         console.error(error);
       }
     });
