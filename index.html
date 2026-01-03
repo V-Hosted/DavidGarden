@@ -4,12 +4,15 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>David's Gardening & Maintenance</title>
-  <meta name="description" content="Lawn mowing, weeding, hedge trimming, traditional window & gutter cleaning in Poole, Bournemouth & Christchurch." />
+
+  <meta name="description"
+        content="Lawn mowing, weeding, hedge trimming, traditional window & gutter cleaning in Poole, Bournemouth & Christchurch." />
+
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
-  <!-- Hero -->
+  <!-- HERO -->
   <header class="hero">
     <div class="container hero-flex">
 
@@ -26,7 +29,7 @@
     </div>
   </header>
 
-  <!-- Services + Gallery -->
+  <!-- SERVICES + GALLERY -->
   <main class="container">
 
     <section class="grid">
@@ -39,7 +42,7 @@
         <li><span class="tick">✓</span> Traditional window cleaning</li>
         <li><span class="tick">✓</span> Window Water-feed pole cleaning (pure water)</li>
         <li><span class="tick">✓</span> Traditional gutter cleaning</li>
-        <li><span class="tick" style="color: red;">♡</span> Love, care and attention to detail</li>
+        <li><span class="tick" style="color:red;">♡</span> Love, care and attention to detail</li>
       </ul>
 
       <div class="gallery">
@@ -53,17 +56,25 @@
 
   </main>
 
-  <!-- Contact Section -->
+  <!-- CONTACT -->
   <section class="contact">
     <div class="contact-inner">
+
       <h2>Contact us now! Get a free quote!</h2>
-      <p>Poole • Bournemouth • Ferndown • Hamworthy • Wimbourne </p>
+      <p>Poole • Bournemouth • Ferndown • Hamworthy • Wimbourne</p>
 
-      <!-- CONTACT FORM (Web3Forms) -->
-      <form id="contactForm" action="https://api.web3forms.com/submit" method="POST" class="contact-form">
+      <!-- CONTACT FORM -->
+      <form id="contactForm"
+            action="https://api.web3forms.com/submit"
+            method="POST"
+            class="contact-form">
 
-        <!-- Your Web3Forms access key -->
-        <input type="hidden" name="access_key" value="0cd66552-5d94-484a-80ec-b1dc5413612b">
+        <!-- ACCESS KEY -->
+        <input type="hidden" name="access_key"
+               value="0cd66552-5d94-484a-80ec-b1dc5413612b">
+
+        <!-- HIDDEN HONEYPOT (ANTI-SPAM) -->
+        <input type="checkbox" name="botcheck" style="display:none">
 
         <div class="form-group">
           <input type="text" name="name" placeholder="Your Name" required>
@@ -78,13 +89,18 @@
         </div>
 
         <div class="form-group">
-          <textarea name="message" rows="4" placeholder="Your Message" required></textarea>
+          <textarea name="message" rows="4"
+                    placeholder="Your Message" required></textarea>
         </div>
 
+        <!-- HUMAN CHECKBOX -->
         <div class="form-group">
-          <label> I'm Human
-            <input type="checkbox" name="verification" required 
-            style="width: 25px; height: 25px; margin-left: 20px; margin-top: 10px;">
+          <label>
+            I'm Human
+            <input type="checkbox"
+                   name="botcheck"
+                   required
+                   style="width:25px;height:25px;margin-left:20px;margin-top:10px;">
           </label>
         </div>
 
@@ -93,14 +109,19 @@
 
       <!-- SOCIAL ICONS -->
       <div class="social-icons">
-        <a href="https://www.facebook.com/people/Davids-Gardening-and-Maintenance/61565070434612/" target="_blank" class="social-link">
+        <a href="https://www.facebook.com/people/Davids-Gardening-and-Maintenance/61565070434612/"
+           target="_blank" class="social-link">
           <img src="assets/facebook.png" alt="Facebook">
         </a>
-        <a href="https://www.instagram.com" target="_blank" class="social-link">
+
+        <a href="https://www.instagram.com"
+           target="_blank" class="social-link">
           <img src="assets/insta.png" alt="Instagram">
         </a>
-        <a href="https://www.tiktok.com/@davids.gardening" target="_blank" class="social-link">
-          <img src="assets/tiktok.png" alt="Tiktok">
+
+        <a href="https://www.tiktok.com/@davids.gardening"
+           target="_blank" class="social-link">
+          <img src="assets/tiktok.png" alt="TikTok">
         </a>
       </div>
 
@@ -118,35 +139,38 @@
     </div>
   </footer>
 
-  <!-- Web3Forms Ajax Script -->
-<script>
-  const form = document.getElementById("contactForm");
+  <!-- WEB3FORMS AJAX SCRIPT -->
+  <script>
+    const form = document.getElementById("contactForm");
 
-  form.addEventListener("submit", async (e) => {
-    e.preventDefault();
+    form.addEventListener("submit", async (e) => {
+      e.preventDefault();
 
-    const formData = new FormData(form);
+      const formData = new FormData(form);
 
-    const response = await fetch("https://api.web3forms.com/submit", {
-      method: "POST",
-      headers: {
-        "Accept": "application/json"
-      },
-      body: formData
+      try {
+        const response = await fetch("https://api.web3forms.com/submit", {
+          method: "POST",
+          headers: {
+            "Accept": "application/json"
+          },
+          body: formData
+        });
+
+        const result = await response.json();
+
+        if (result.success) {
+          alert("Message sent successfully!");
+          form.reset();
+        } else {
+          alert(result.message || "There was an error sending your message.");
+        }
+      } catch (error) {
+        alert("Network error. Please try again later.");
+        console.error(error);
+      }
     });
-
-    const result = await response.json();
-
-    if (result.success) {
-      alert("Message sent successfully!");
-      form.reset();
-    } else {
-      alert(result.message || "There was an error sending your message.");
-    }
-  });
-</script>
+  </script>
 
 </body>
 </html>
-
-
